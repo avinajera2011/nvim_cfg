@@ -1,6 +1,6 @@
 set relativenumber
 set splitright
-set number
+set number!
 set nocompatible
 set tabstop=4
 set colorcolumn=120
@@ -24,10 +24,15 @@ map <C-m> :NERDTree<CR>
 map <F11> :new term://powershell<CR><Leader>d<Leader>d
 map <C-t> :vnew 
 map <C-q> :q!<CR>
-map <C-s> :w<CR>
+imap <C-s> <ESC>:w<CR>a
+nmap <C-s> :w<CR>
+map <C-s> :vsplit<CR>
 map <Leader>s :Git add .<CR>
 map <Leader>c :Git commit -m "
 map <Leader>p :Git push -u origin 
+map <Leader>[ :%s/(<space>/(/g\|%s/<space>)/)/g<CR>
+map <Leader>] :%s/\[<space>/[/g\|%s/\<space>]/]/g<CR>
+map <Leader><Leader> :%s/{<space>/{/g\|%s/<space>}/}/g<CR>
 nnoremap <silent> <Leader>i :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>d :exe "resize " . (winheight(0) * 2/3)<CR>
 
