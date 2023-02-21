@@ -25,6 +25,8 @@ map <F11> :new term://powershell<CR><Leader>d<Leader>d
 map <C-t> :vnew 
 map <C-q> :q!<CR>
 map <C-s> :w<CR>
+map <Leader>s :Git add .<CR>
+map <Leader>c :Git commit -m "
 nnoremap <silent> <Leader>i :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>d :exe "resize " . (winheight(0) * 2/3)<CR>
 
@@ -56,7 +58,7 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 let g:airline_theme='dark' " <theme> is a valid theme name
 let g:jedi#completions_enabled = 0
 let g:jedi#use_splits_not_buffers = "right"
-"let g:neomake_python_enabled_makers = ['pylint']
+"let g:neomake_python_enabled_makers = ['pylint'cc
 "call neomake#configure#automake('nrwi', 500)
 let g:highlightedyank_highlight_duration = 1000
 colorscheme gruvbox
