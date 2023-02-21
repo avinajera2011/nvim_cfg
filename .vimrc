@@ -27,6 +27,7 @@ map <C-q> :q!<CR>
 map <C-s> :w<CR>
 map <Leader>s :Git add .<CR>
 map <Leader>c :Git commit -m "
+map <Leader>p :Git push -u origin 
 nnoremap <silent> <Leader>i :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>d :exe "resize " . (winheight(0) * 2/3)<CR>
 
@@ -49,7 +50,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
-# Disable this options before install all plugins from beginning and then enable it
+"Disable this options before install all plugins from beginning and then enable it
 let g:python3_host_prog='C:\Anaconda3\python.exe'
 let g:deoplete#enable_at_startup = 1
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
@@ -58,8 +59,6 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 let g:airline_theme='dark' " <theme> is a valid theme name
 let g:jedi#completions_enabled = 0
 let g:jedi#use_splits_not_buffers = "right"
-"let g:neomake_python_enabled_makers = ['pylint'cc
-"call neomake#configure#automake('nrwi', 500)
 let g:highlightedyank_highlight_duration = 1000
 colorscheme gruvbox
 set background=dark
