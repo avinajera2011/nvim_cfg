@@ -4,7 +4,6 @@ set number
 set nocompatible
 set tabstop=4
 set colorcolumn=120
-"highlight ColorColumn guifg='11f0c3'
 set expandtab
 set cursorline
 set hlsearch
@@ -48,9 +47,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
-
-
-
+# Disable this options before install all plugins from beginning and then enable it
 let g:python3_host_prog='C:\Anaconda3\python.exe'
 let g:deoplete#enable_at_startup = 1
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
